@@ -29,24 +29,21 @@ cd knative-docs/docs/serving/samples/hello-world/helloworld-shell
 
 ## Building
 
-1. Create a new file named `script.sh` and paste the script below. This will run BusyBox' `http` returning a friendly welcome message as `plain/text`.
+1. Create a new file named `index.cgi` and copy the code block below into it. This script sets the content type for the response and executes the shell script `script.sh`
 
-  ```shell
-  #!/bin/sh
+   ```shell
+   #!/bin/env sh
 
-  # Set the configuration to serve the index file plain/text
-  echo "I:index.txt" > httpd.conf
+   echo "Content-type: text/plain"
+   echo ""
+   source ./script.sh
+   ```
 
-  # Prepare this index file with a nice welcome message
-  # Use environment variable TARGET or "World" if not set
-  echo "Hello ${TARGET:=World}!" > index.txt
+1. Create a new file named `script.sh` and paste the script below. This script prints the text to be return to the http client.
 
-  # Start up busybox's httpd service, listen on port 8080 and
-  # stay in the foreground. Prints out verbose logs, too.
-  # See https://git.busybox.net/busybox/tree/networking/httpd.c for
-  # details
-  httpd -vv -p 8080 -f
-  ```
+   ```shell
+   echo "Hello ${TARGET:=World}!"
+   ```
 
 1. Create a new file named `Dockerfile` and copy the code block below into it.
 
@@ -58,11 +55,14 @@ cd knative-docs/docs/serving/samples/hello-world/helloworld-shell
    # Serve from this directory
    WORKDIR /httpd
 
-   # Copy over the service script
-   COPY script.sh /httpd
+   # Copy over the scripts
+   COPY script.sh index.cgi /httpd/cgi-bin/
 
-   # Start up the webserver
-   CMD [ "/bin/sh", "/httpd/script.sh" ]
+   # Start up busybox's httpd service, listen on port 8080 and
+   # stay in the foreground. Prints out verbose logs, too.
+   # See https://git.busybox.net/busybox/tree/networking/httpd.c for
+   # details
+   CMD [ "httpd", "-vv", "-p", "8080", "-f" ]
    ```
 
 Once you have recreated the sample code files (or used the files in the sample
