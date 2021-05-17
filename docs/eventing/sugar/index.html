@@ -72,6 +72,14 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+
+
+          </div>
+        </aside>
+      
     </div>
     
       <header class="md-header" data-md-component="header">
@@ -3283,7 +3291,7 @@ underlying eventing infrastructure is created on-demand, and cleaned up when no
 longer needed.</p>
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
 <p>The following command installs the Eventing Sugar Controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-sugar-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://github.com/knative/eventing/releases/download/0.23/eventing-sugar-controller.yaml
 </code></pre></div>
 <h2 id="automatic-broker-creation">Automatic Broker Creation<a class="headerlink" href="#automatic-broker-creation" title="Permanent link">&para;</a></h2>
 <p>One way to create a Broker is to manually apply a resource to a cluster using

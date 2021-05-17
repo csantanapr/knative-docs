@@ -118,14 +118,14 @@ given the same level of review.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;working-groups&#34;&gt;Working groups&lt;/h2&gt;
 &lt;p&gt;The Knative contributors community is organized into a set of
-&lt;a href=&#34;./working-groups/WORKING-GROUPS.md&#34;&gt;working groups&lt;/a&gt;. Any contribution to
+&lt;a href=&#34;../working-groups/WORKING-GROUPS&#34;&gt;working groups&lt;/a&gt;. Any contribution to
 Knative should be started by first engaging with the appropriate working group.&lt;/p&gt;
 &lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of conduct&lt;/h2&gt;
 &lt;p&gt;All members of the Knative community must abide by the
-&lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt;. Only by respecting each other can we
+&lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;Code of Conduct&lt;/a&gt;. Only by respecting each other can we
 develop a productive, collaborative community.&lt;/p&gt;
 &lt;h2 id=&#34;team-values&#34;&gt;Team values&lt;/h2&gt;
-&lt;p&gt;We promote and encourage a set of &lt;a href=&#34;./VALUES.md&#34;&gt;shared values&lt;/a&gt; to improve our
+&lt;p&gt;We promote and encourage a set of &lt;a href=&#34;../VALUES&#34;&gt;shared values&lt;/a&gt; to improve our
 productivity and inter-personal interactions.&lt;/p&gt;
 &lt;h2 id=&#34;contributor-license-agreements&#34;&gt;Contributor license agreements&lt;/h2&gt;
 &lt;p&gt;We&amp;rsquo;d love to accept your patches! But before we can take them, you will have to
@@ -148,7 +148,7 @@ community by adding the doc to our
 &lt;a href=&#34;https://drive.google.com/drive/folders/0AM-QGZJ-HUA8Uk9PVA&#34;&gt;Team Drive&lt;/a&gt;
 and sending an email to the appropriate working group&amp;rsquo;s mailing list to let
 people know the doc is there. To get write access to the drive, you&amp;rsquo;ll need to
-be a &lt;a href=&#34;./ROLES.md#member&#34;&gt;member&lt;/a&gt; of the Knative organization.&lt;/p&gt;
+be a &lt;a href=&#34;../ROLES#member&#34;&gt;member&lt;/a&gt; of the Knative organization.&lt;/p&gt;
 &lt;p&gt;The team drive is shared with the
 &lt;a href=&#34;https://groups.google.com/forum/#!forum/knative-users&#34;&gt;knative-users@&lt;/a&gt; and
 &lt;a href=&#34;https://groups.google.com/forum/#!forum/knative-dev&#34;&gt;knative-dev@&lt;/a&gt; Google
@@ -162,12 +162,12 @@ permission. Please join one of the above groups (you can join knative-users and
 later join knative-dev if you want immediate access).&lt;/p&gt;
 &lt;h2 id=&#34;contributing-documentation&#34;&gt;Contributing documentation&lt;/h2&gt;
 &lt;p&gt;For more information about contributing to the Knative documentation, see
-&lt;a href=&#34;./docs/DOCS-CONTRIBUTING.md&#34;&gt;DOCS-CONTRIBUTING.md&lt;/a&gt;. A lot of the information on
+&lt;a href=&#34;../docs/DOCS-CONTRIBUTING&#34;&gt;DOCS-CONTRIBUTING&lt;/a&gt;. A lot of the information on
 this page still applies, but you&amp;rsquo;ll find the specifics about the docs process
 there.&lt;/p&gt;
 &lt;h2 id=&#34;contributing-a-feature&#34;&gt;Contributing a feature&lt;/h2&gt;
 &lt;p&gt;The process for adding features to Knative can be found
-&lt;a href=&#34;./mechanics/FEATURE-TRACKS.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../mechanics/FEATURE-TRACKS&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;setting-up-to-contribute-to-knative&#34;&gt;Setting up to contribute to Knative&lt;/h2&gt;
 &lt;p&gt;Check out this
 &lt;a href=&#34;https://github.com/knative/serving/blob/main/README.md&#34;&gt;README&lt;/a&gt; to learn
@@ -202,9 +202,9 @@ PR.&lt;/p&gt;
 &lt;p&gt;This project uses
 &lt;a href=&#34;https://github.com/kubernetes/test-infra/tree/master/prow&#34;&gt;Prow&lt;/a&gt; to assign
 reviewers to the PR, set labels, run tests automatically, and so forth.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;./REVIEWING.md&#34;&gt;Reviewing and Merging Pull Requests&lt;/a&gt; for the PR review and
+&lt;p&gt;See &lt;a href=&#34;../REVIEWING&#34;&gt;Reviewing and Merging Pull Requests&lt;/a&gt; for the PR review and
 merge process used for Knative and for more information about
-&lt;a href=&#34;./REVIEWING.md#prow&#34;&gt;Prow&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../REVIEWING#prow&#34;&gt;Prow&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
 &lt;p&gt;GitHub issues can be used to report bugs or submit feature requests.&lt;/p&gt;
 &lt;p&gt;When reporting a bug please include the following key pieces of information:&lt;/p&gt;
@@ -281,17 +281,17 @@ Conduct actions against members of the KTC, but may not alter the charter or
 governance of the KTC rules. The Tech Oversight Committee (TOC) operates
 entirely within the governance definitions delineated by the KSC.&lt;/p&gt;
 &lt;h2 id=&#34;community-and-operations&#34;&gt;Community and Operations&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;./STEERING-COMMITTEE.md&#34;&gt;Knative Steering Committee&lt;/a&gt; is responsible for the
+&lt;p&gt;The &lt;a href=&#34;../STEERING-COMMITTEE&#34;&gt;Knative Steering Committee&lt;/a&gt; is responsible for the
 general health of the Knative community. Responsibilities include maintaining
 the governance framework, code of conduct, community meetings, communication
 platforms, and test resources.&lt;/p&gt;
 &lt;h2 id=&#34;trademarks&#34;&gt;Trademarks&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;./TRADEMARK-COMMITTEE.md&#34;&gt;Knative Trademark Committee&lt;/a&gt; is responsible for
+&lt;p&gt;The &lt;a href=&#34;../TRADEMARK-COMMITTEE&#34;&gt;Knative Trademark Committee&lt;/a&gt; is responsible for
 management, licensing, and conformance verification of Knative logos, names, and
 trademarks, including the definition of what &amp;ldquo;Knative&amp;rdquo; is and the definition and
 rules for usage of derived marks.&lt;/p&gt;
 &lt;h2 id=&#34;technology-and-software-implementation&#34;&gt;Technology and Software Implementation&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;./TECH-OVERSIGHT-COMMITTEE.md&#34;&gt;Knative Technical Oversight Committee&lt;/a&gt; is
+&lt;p&gt;The &lt;a href=&#34;../TECH-OVERSIGHT-COMMITTEE&#34;&gt;Knative Technical Oversight Committee&lt;/a&gt; is
 responsible for the technical oversight, release process, and integration of the
 technology components of the Knative project. Most day-to-day work is delegated
 by the TOC to various subject-specific working groups.&lt;/p&gt;
@@ -314,9 +314,9 @@ Working Groups) are recommendations which individual working groups may choose
 to adopt, rather than requirements. Each working group should document their
 processes; either in their own repo or in a pointer to these docs.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./WORKING-GROUP-PROCESSES.md&#34;&gt;Working group formation and management&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./FEATURE-TRACKS.md&#34;&gt;Feature Tracks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./RELEASE-VERSIONING-PRINCIPLES.md&#34;&gt;Releases and API versioning principles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./WORKING-GROUP-PROCESSES&#34;&gt;Working group formation and management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./FEATURE-TRACKS&#34;&gt;Feature Tracks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./RELEASE-VERSIONING-PRINCIPLES&#34;&gt;Releases and API versioning principles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- TODO(argent/eallred): Add recommended process for:
 
@@ -340,11 +340,11 @@ processes; either in their own repo or in a pointer to these docs.&lt;/p&gt;
         
         
         &lt;p&gt;Most community activity is organized into &lt;em&gt;working groups&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Working groups follow the &lt;a href=&#34;../CONTRIBUTING.md&#34;&gt;contributing&lt;/a&gt; guidelines although
+&lt;p&gt;Working groups follow the &lt;a href=&#34;../../CONTRIBUTING&#34;&gt;contributing&lt;/a&gt; guidelines although
 each of these groups may operate a little differently depending on their needs
 and workflow.&lt;/p&gt;
 &lt;p&gt;When the need arises, a new working group can be created. See the
-&lt;a href=&#34;../mechanics/WORKING-GROUP-PROCESSES.md&#34;&gt;working group processes&lt;/a&gt; for working
+&lt;a href=&#34;../../mechanics/WORKING-GROUP-PROCESSES&#34;&gt;working group processes&lt;/a&gt; for working
 group proposal and creation procedures.&lt;/p&gt;
 &lt;p&gt;The working groups generate design docs which are kept in a
 &lt;a href=&#34;https://drive.google.com/drive/folders/0AM-QGZJ-HUA8Uk9PVA&#34;&gt;shared drive&lt;/a&gt;
@@ -474,7 +474,7 @@ conventions&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./client/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../client/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -547,7 +547,7 @@ repo.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./docs/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../docs/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -683,7 +683,7 @@ repo.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./delivery/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../delivery/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -755,7 +755,7 @@ repo.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./sources/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../sources/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -907,7 +907,7 @@ interest include: load balancing, routing, DNS configuration and TLS support.&lt
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./operations/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../operations/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -974,7 +974,7 @@ performance/scale/load testing infrastructure&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Charter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./productivity/CHARTER.md&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../productivity/CHARTER&#34;&gt;Charter&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Forum&lt;/td&gt;
@@ -1552,8 +1552,8 @@ community focus&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Ensure the team adheres to our
-&lt;a href=&#34;./CONTRIBUTING.md#code-of-conduct&#34;&gt;code of conduct&lt;/a&gt; and respects our
-&lt;a href=&#34;./VALUES.md&#34;&gt;values&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../CONTRIBUTING#code-of-conduct&#34;&gt;code of conduct&lt;/a&gt; and respects our
+&lt;a href=&#34;../VALUES&#34;&gt;values&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Foster an environment for a healthy and happy community of developers and
@@ -1563,7 +1563,7 @@ contributors.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;committee-mechanics&#34;&gt;Committee Mechanics&lt;/h2&gt;
-&lt;p&gt;The TOC is &lt;a href=&#34;./mechanics/TOC.md&#34;&gt;elected by the community&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The TOC is &lt;a href=&#34;../mechanics/TOC&#34;&gt;elected by the community&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The TOC’s work includes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1679,7 +1679,7 @@ and code samples are licensed under the
         
         
         &lt;p&gt;The Knative Steering Committee (KSC) is
-&lt;a href=&#34;./GOVERNANCE.md&#34;&gt;responsible for the general health of the Knative community&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../GOVERNANCE&#34;&gt;responsible for the general health of the Knative community&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The governance of Knative is an open, living document, and will continue to
 evolve as the community and project change.&lt;/p&gt;
 &lt;ul&gt;
@@ -1710,7 +1710,7 @@ evolve as the community and project change.&lt;/p&gt;
 &lt;li&gt;Define and evolve project governance structures and policies, including
 project roles and how collaborators become members, approvers, leads, and/or
 administrators. This includes policy for the creation and administration of
-&lt;a href=&#34;./working-groups/WORKING-GROUPS.md&#34;&gt;working groups&lt;/a&gt; and committees.&lt;/li&gt;
+&lt;a href=&#34;../working-groups/WORKING-GROUPS&#34;&gt;working groups&lt;/a&gt; and committees.&lt;/li&gt;
 &lt;li&gt;Steward, control access, delegate access, and establish processes regarding
 all Knative project resources and has the final say in the disposition of
 those resources.&lt;/li&gt;
@@ -1719,7 +1719,7 @@ promoting the community. This advice is non-binding on the Trademark
 Committee.&lt;/li&gt;
 &lt;li&gt;Define and evolve the scope of the Knative community and extensions, and the
 process for migration of sandbox projects into Knative Extensions.&lt;/li&gt;
-&lt;li&gt;Receive and handle reports about &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;code of conduct&lt;/a&gt;
+&lt;li&gt;Receive and handle reports about &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;code of conduct&lt;/a&gt;
 violations and maintain confidentiality.&lt;/li&gt;
 &lt;li&gt;Receive security reports; work with the appropriate technical leads to accept
 or reject the report; maintain the private nature of such reports until
@@ -1732,7 +1732,7 @@ clarifications, or escalations within the project scope.&lt;/li&gt;
 committee currently recognizes this delegated authority for:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Technical guidance is delegated to the
-&lt;a href=&#34;./TECH-OVERSIGHT-COMMITTEE.md&#34;&gt;Technical Oversight Committee&lt;/a&gt;.&lt;/li&gt;
+&lt;a href=&#34;../TECH-OVERSIGHT-COMMITTEE&#34;&gt;Technical Oversight Committee&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;committee-meetings&#34;&gt;Committee Meetings&lt;/h2&gt;
 &lt;p&gt;KSC currently meets weekly, or as-needed. Meetings are open to public and held
@@ -1983,7 +1983,7 @@ and code samples are licensed under the
         
         &lt;p&gt;Slack is the main communication platform for Knative outside of our mailing
 lists. It’s important that conversation stays on topic in each channel, and that
-everyone abides by the &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt;. Community
+everyone abides by the &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;Code of Conduct&lt;/a&gt;. Community
 members should all expect to have a positive experience.&lt;/p&gt;
 &lt;p&gt;Chat is searchable and public. Do not make comments that you would not say on a
 video recording or in another public space. Please be courteous to others.&lt;/p&gt;
@@ -1993,18 +1993,18 @@ is only to be used by admins.&lt;/p&gt;
 &lt;p&gt;You can join the &lt;a href=&#34;https://slack.knative.dev&#34;&gt;Knative Slack&lt;/a&gt; instance at
 &lt;a href=&#34;https://slack.knative.dev&#34;&gt;https://slack.knative.dev&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
-&lt;p&gt;The Knative &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt; applies throughout the
+&lt;p&gt;The Knative &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;Code of Conduct&lt;/a&gt; applies throughout the
 project, and includes all communication mediums.&lt;/p&gt;
 &lt;h2 id=&#34;admins&#34;&gt;Admins&lt;/h2&gt;
 &lt;p&gt;Members of the
-&lt;a href=&#34;TECH-OVERSIGHT-COMMITTEE.md&#34;&gt;Technical Oversight Committee (TOC)&lt;/a&gt; and
-&lt;a href=&#34;STEERING-COMMITTEE.md&#34;&gt;Knative Steering Committee (KSC)&lt;/a&gt; are also the
+&lt;a href=&#34;TECH-OVERSIGHT-COMMITTEE&#34;&gt;Technical Oversight Committee (TOC)&lt;/a&gt; and
+&lt;a href=&#34;STEERING-COMMITTEE&#34;&gt;Knative Steering Committee (KSC)&lt;/a&gt; are also the
 administrators for the Knative Slack instance.&lt;/p&gt;
 &lt;p&gt;Slack admins should make sure to mention this in the “What I do” section of
 their Slack profile, as well as for which time zone.&lt;/p&gt;
 &lt;p&gt;To connect: please reach out in the #slack-admins channel or DM (Direct Message)
-a member of the &lt;a href=&#34;STEERING-COMMITTEE.md&#34;&gt;KSC&lt;/a&gt; or
-&lt;a href=&#34;TECH-OVERSIGHT-COMMITTEE.md&#34;&gt;TOC&lt;/a&gt;.&lt;/p&gt;
+a member of the &lt;a href=&#34;STEERING-COMMITTEE&#34;&gt;KSC&lt;/a&gt; or
+&lt;a href=&#34;TECH-OVERSIGHT-COMMITTEE&#34;&gt;TOC&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;admin-expectations-and-guidelines&#34;&gt;Admin expectations and guidelines&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Adhere to Code of Conduct&lt;/li&gt;
@@ -2021,7 +2021,7 @@ message&lt;/li&gt;
 &lt;h2 id=&#34;creating-channels&#34;&gt;Creating channels&lt;/h2&gt;
 &lt;p&gt;Please reach out to the #slack-admins group with your request to create a new
 channel.&lt;/p&gt;
-&lt;p&gt;Channels are dedicated to &lt;a href=&#34;./working-groups/WORKING-GROUPS.md&#34;&gt;Working Groups&lt;/a&gt;,
+&lt;p&gt;Channels are dedicated to &lt;a href=&#34;../working-groups/WORKING-GROUPS&#34;&gt;Working Groups&lt;/a&gt;,
 sub-projects, community topics, and related programs/projects.&lt;/p&gt;
 &lt;p&gt;Channels are not:&lt;/p&gt;
 &lt;ul&gt;
@@ -2067,7 +2067,7 @@ in the traditional sense.
 &lt;a href=&#34;https://get.Slack.help/hc/en-us/articles/204475027-Deactivate-a-member-s-account&#34;&gt;Read Slack’s policy on this.&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Spreading spam content in DMs or channels&lt;/li&gt;
-&lt;li&gt;Not adhering to the &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt; in DMs or channels&lt;/li&gt;
+&lt;li&gt;Not adhering to the &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;Code of Conduct&lt;/a&gt; in DMs or channels&lt;/li&gt;
 &lt;li&gt;Overtly selling products, related or unrelated to Knative&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;specific-channel-rules&#34;&gt;Specific channel rules&lt;/h2&gt;
@@ -2199,14 +2199,14 @@ personally. Consider other people’s perspective (including the wide range of
 applicability of Knative). Empathize with our users. Focus on the specific
 issue at hand, and remember that we all care about the project, first and
 foremost.&lt;/li&gt;
-&lt;li&gt;Emails to the &lt;a href=&#34;./CONTRIBUTING.md#contributing-a-feature&#34;&gt;mailing lists&lt;/a&gt;,
+&lt;li&gt;Emails to the &lt;a href=&#34;../CONTRIBUTING#contributing-a-feature&#34;&gt;mailing lists&lt;/a&gt;,
 document comments, or meetings are often better and higher bandwidth ways to
 communicate complex and nuanced design issues, as opposed to protracted
 heated live chats.&lt;/li&gt;
 &lt;li&gt;Be mindful of the terminology you are using, it may not be the same as
 someone else and cause misunderstanding. To promote clear and precise
 communication, define the terms you are using in context.&lt;/li&gt;
-&lt;li&gt;See also the &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt;, which everyone must
+&lt;li&gt;See also the &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;Code of Conduct&lt;/a&gt;, which everyone must
 abide by.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2246,8 +2246,8 @@ and code samples are licensed under the
         
         
         &lt;p&gt;The Knative Trademark Committee (KTC)
-&lt;a href=&#34;./GOVERNANCE.md&#34;&gt;advises the trademark owner on the usage and enforcement of Knative logos, names, and trademarks&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It is a separate body from the &lt;a href=&#34;./STEERING-COMMITTEE.md&#34;&gt;Steering Committee&lt;/a&gt; to
+&lt;a href=&#34;../GOVERNANCE&#34;&gt;advises the trademark owner on the usage and enforcement of Knative logos, names, and trademarks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is a separate body from the &lt;a href=&#34;../STEERING-COMMITTEE&#34;&gt;Steering Committee&lt;/a&gt; to
 better represent the needs of vendors and other companies which market products
 in conjunction with the Knative mark.&lt;/p&gt;
 &lt;p&gt;The governance of Knative is an open, living document, and will continue to
@@ -2522,8 +2522,8 @@ this is not a requirement.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Member of the Knative github org. Create a PR adding you to
-&lt;a href=&#34;../peribolos/knative.yaml&#34;&gt;knative.yaml&lt;/a&gt; and/or to
-&lt;a href=&#34;../peribolos/knative-sandbox.yaml&#34;&gt;knative-sandbox.yaml&lt;/a&gt; which after when
+&lt;a href=&#34;../../peribolos/knative.yaml&#34;&gt;knative.yaml&lt;/a&gt; and/or to
+&lt;a href=&#34;../../peribolos/knative-sandbox.yaml&#34;&gt;knative-sandbox.yaml&lt;/a&gt; which after when
 merged will send you an invite that you have to accept to become a member
 of these organizations.&lt;/p&gt;
 &lt;/li&gt;
@@ -2619,7 +2619,7 @@ approver in an OWNERS file:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Responsible for project quality control via &lt;a href=&#34;./REVIEWING.md&#34;&gt;code reviews&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Responsible for project quality control via &lt;a href=&#34;../REVIEWING&#34;&gt;code reviews&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Focus on holistic acceptance of contribution such as dependencies with other
 features, backward / forward compatibility, API and flag definitions, etc.&lt;/li&gt;
@@ -2627,7 +2627,7 @@ features, backward / forward compatibility, API and flag definitions, etc.&lt;/l
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Expected to be responsive to review requests as per
-&lt;a href=&#34;./REVIEWING.md&#34;&gt;community expectations&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../REVIEWING&#34;&gt;community expectations&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Mentor new contributors and project members.&lt;/p&gt;
@@ -2687,7 +2687,7 @@ are responsible for the overall technical health of their functional area.&lt;/p
 escalation to the technical oversight committee is possible.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Technical review of &lt;a href=&#34;./mechanics/FEATURE-TRACKS.md&#34;&gt;feature tracks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Technical review of &lt;a href=&#34;../mechanics/FEATURE-TRACKS&#34;&gt;feature tracks&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Perform issue triage on GitHub.&lt;/p&gt;
@@ -2703,7 +2703,7 @@ edit issues and PRs, edit wiki, create/delete labels and milestones).&lt;/p&gt;
 &lt;p&gt;Capable of directly applying lgtm + approve labels for any PR.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Expected to respect OWNERS files approvals and use
-&lt;a href=&#34;./REVIEWING.md#merging-prs&#34;&gt;standard procedure for merging code&lt;/a&gt;.&lt;/li&gt;
+&lt;a href=&#34;../REVIEWING#merging-prs&#34;&gt;standard procedure for merging code&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2750,7 +2750,7 @@ or approver.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Run their working group as explained in the
-&lt;a href=&#34;./mechanics/WORKING-GROUP-PROCESSES.md&#34;&gt;Working Group Processes&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;../mechanics/WORKING-GROUP-PROCESSES&#34;&gt;Working Group Processes&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Meetings. Prepare the agenda and run the regular working group meetings.&lt;/p&gt;
@@ -2770,7 +2770,7 @@ the areas of focus for the working group over the next 6 months.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Holistic responsibility for their working group&amp;rsquo;s &lt;a href=&#34;./mechanics/FEATURE-TRACKS.md&#34;&gt;feature
+&lt;p&gt;Holistic responsibility for their working group&amp;rsquo;s &lt;a href=&#34;../mechanics/FEATURE-TRACKS&#34;&gt;feature
 tracks&lt;/a&gt;: tracking, health, and execution.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2887,7 +2887,7 @@ and code samples are licensed under the
 Code reviews increase both the quality and readability of our code base, which
 in turn produces high quality software.&lt;/p&gt;
 &lt;p&gt;This document provides guidelines for how the project&amp;rsquo;s
-&lt;a href=&#34;./ROLES.md#member&#34;&gt;Members&lt;/a&gt; review issues and merge pull requests (PRs).&lt;/p&gt;
+&lt;a href=&#34;../ROLES#member&#34;&gt;Members&lt;/a&gt; review issues and merge pull requests (PRs).&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#pull-requests-welcome&#34;&gt;Pull requests welcome&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#code-of-conduct&#34;&gt;Code of Conduct&lt;/a&gt;&lt;/li&gt;
@@ -2907,7 +2907,7 @@ Please do not ever hesitate to ask a question or submit a PR.&lt;/p&gt;
 &lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
 &lt;p&gt;Reviewers are often the first points of contact between new members of the
 community and are important in shaping the community. We encourage reviewers to
-read the &lt;a href=&#34;./CODE-OF-CONDUCT.md&#34;&gt;code of conduct&lt;/a&gt; and to go above and beyond the
+read the &lt;a href=&#34;../CODE-OF-CONDUCT&#34;&gt;code of conduct&lt;/a&gt; and to go above and beyond the
 code of conduct to promote a collaborative and respectful community.&lt;/p&gt;
 &lt;h2 id=&#34;code-reviewers&#34;&gt;Code reviewers&lt;/h2&gt;
 &lt;p&gt;The code review process can introduce latency for contributors and additional
@@ -2936,15 +2936,15 @@ not works in progress (WIP), are passing tests, and do not need rebase to be
 merged. PRs that do not have a proper CLA, are WIP, do not pass tests, or
 require a rebase are not considered active PRs.&lt;/p&gt;
 &lt;h3 id=&#34;holds&#34;&gt;Holds&lt;/h3&gt;
-&lt;p&gt;Any &lt;a href=&#34;./ROLES.md#approver&#34;&gt;Approver&lt;/a&gt; who wants to review a PR but does not have
+&lt;p&gt;Any &lt;a href=&#34;../ROLES#approver&#34;&gt;Approver&lt;/a&gt; who wants to review a PR but does not have
 time immediately can put a hold on a PR. If you need more time, say so on the PR
 discussion and offer an ETA measured in single-digit days at most. Any PR that
 has a hold will not be merged until the person who requested the hold acks the
 review, withdraws their hold, or is overruled by a majority of approvers.&lt;/p&gt;
 &lt;h2 id=&#34;approvers&#34;&gt;Approvers&lt;/h2&gt;
-&lt;p&gt;Merging of PRs is done by &lt;a href=&#34;./ROLES.md#approver&#34;&gt;Approvers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Merging of PRs is done by &lt;a href=&#34;../ROLES#approver&#34;&gt;Approvers&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As is the case with many open source projects, becoming an Approver is based on
-contributions to the project. See our &lt;a href=&#34;./ROLES.md&#34;&gt;community roles&lt;/a&gt; document for
+contributions to the project. See our &lt;a href=&#34;../ROLES&#34;&gt;community roles&lt;/a&gt; document for
 information on how this is done.&lt;/p&gt;
 &lt;h2 id=&#34;merging-prs&#34;&gt;Merging PRs&lt;/h2&gt;
 &lt;p&gt;A PR can be merged only after the following criteria are met:&lt;/p&gt;

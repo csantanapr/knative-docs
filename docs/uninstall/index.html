@@ -72,6 +72,14 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+
+
+          </div>
+        </aside>
+      
     </div>
     
       <header class="md-header" data-md-component="header">
@@ -3277,14 +3285,14 @@ To uninstall a YAML-based Knative installation, follow the <a href="#uninstall-a
 <p>Knative also supports the use of the Kubernetes Horizontal Pod Autoscaler (HPA) for driving
 autoscaling decisions.
 The following command will uninstall the components needed to support HPA-class autoscaling:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-hpa.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/serving/releases/download/0.23/serving-hpa.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">TLS with cert-manager</label><div class="tabbed-content">
 <ol>
 <li>Uninstall the component that integrates Knative with cert-manager:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-certmanager/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-certmanager/releases/download/0.23/release.yaml
 </code></pre></div>
 <ol>
 <li>Optional: if you no longer need cert-manager, uninstall it by following the steps in the
@@ -3293,18 +3301,18 @@ The following command will uninstall the components needed to support HPA-class 
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">TLS via HTTP01</label><div class="tabbed-content">
 <p>Uninstall the <code>net-http01</code> controller by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-http01/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-http01/releases/download/0.23/release.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">TLS wildcard support</label><div class="tabbed-content">
 <p>Uninstall the components needed to provision wildcard certificates in each namespace by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-nscert.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/serving/releases/download/0.23/serving-nscert.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">DomainMapping CRD</label><div class="tabbed-content">
 <p>To uninstall the <code>DomainMapping</code> components run:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping.yaml
-kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping-crds.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/serving/releases/download/0.23/serving-domainmapping.yaml
+kubectl delete -f https://github.com/knative/serving/releases/download/0.23/serving-domainmapping-crds.yaml
 </code></pre></div>
 </div>
 </div>
@@ -3334,12 +3342,12 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 <ol>
 <li>
 <p>Uninstall the Knative Contour controller by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-contour/latest/net-contour.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-contour/releases/download/0.23/net-contour.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Uninstall Contour:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-contour/latest/contour.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-contour/releases/download/0.23/contour.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -3354,12 +3362,12 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 <ol>
 <li>
 <p>Uninstall the Knative Istio controller by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-istio/latest/net-istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-istio/releases/download/0.23/net-istio.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Optional: if you no longer need Istio, uninstall it by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-istio/latest/istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-istio/releases/download/0.23/istio.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -3371,7 +3379,7 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 </div>
 <input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">Kourier</label><div class="tabbed-content">
 <p>Uninstall the Knative Kourier controller by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/net-kourier/latest/kourier.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/net-kourier/releases/download/0.23/kourier.yaml
 </code></pre></div>
 </div>
 </div>
@@ -3394,50 +3402,50 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 <ol>
 <li>Uninstall the Kafka Sink data plane:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-sink.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-sink.yaml
 </code></pre></div>
 <ol>
 <li>Uninstall the Kafka controller:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-controller.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Sugar Controller</label><div class="tabbed-content">
 <p>Uninstall the Eventing Sugar Controller by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-sugar-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/eventing/releases/download/0.23/eventing-sugar-controller.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">GitHub Source</label><div class="tabbed-content">
 <p>Uninstall a single-tenant GitHub source by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/github.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-github/releases/download/0.23/github.yaml
 </code></pre></div>
 <p>Uninstall a multi-tenant GitHub source by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/mt-github.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-github/releases/download/0.23/mt-github.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><label for="__tabbed_3_4">Apache Camel-K Source</label><div class="tabbed-content">
 <p>Uninstall the Apache Camel-K Source by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-camel/latest/camel.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-camel/releases/download/0.23/camel.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><label for="__tabbed_3_5">Apache Kafka Source</label><div class="tabbed-content">
 <p>Uninstall the Apache Kafka source by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka/latest/source.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-kafka/releases/download/0.23/source.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><label for="__tabbed_3_6">GCP Sources</label><div class="tabbed-content">
 <p>Uninstall the GCP sources by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/google-nightly/knative-gcp/latest/cloud-run-events.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/google/knative-gcp/releases/download/0.23/cloud-run-events.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><label for="__tabbed_3_7">Apache CouchDB Source</label><div class="tabbed-content">
 <p>Uninstall the Apache CouchDB source by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-couchdb/latest/couchdb.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-couchdb/releases/download/0.23/couchdb.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_3_8" name="__tabbed_3" type="radio" /><label for="__tabbed_3_8">VMware Sources and Bindings</label><div class="tabbed-content">
 <p>Uninstall the VMware sources and bindings by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/vmware-tanzu-nightly/sources-for-knative/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/vmware-tanzu/sources-for-knative/releases/download/0.23/release.yaml
 </code></pre></div>
 </div>
 </div>
@@ -3449,19 +3457,19 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 <ol>
 <li>
 <p>Uninstall the Kafka Broker data plane by running the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-broker.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-broker.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Uninstall the Kafka controller by running the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-controller.yaml
 </code></pre></div>
 </li>
 </ol>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">MT-Channel-based</label><div class="tabbed-content">
 <p>Uninstall the broker by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/eventing/latest/mt-channel-broker.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/eventing/releases/download/0.23/mt-channel-broker.yaml
 </code></pre></div>
 </div>
 </div>
@@ -3471,7 +3479,7 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 
 <div class="tabbed-set" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Apache Kafka Channel</label><div class="tabbed-content">
 <p>Uninstall the Apache Kafka Channel by running:</p>
-<div class="highlight"><pre><span></span><code>curl -L <span class="s2">&quot;https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka/latest/channel-consolidated.yaml&quot;</span> <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl -L <span class="s2">&quot;https://github.com/knative-sandbox/eventing-kafka/releases/download/0.23/channel-consolidated.yaml&quot;</span> <span class="se">\</span>
  <span class="p">|</span> sed <span class="s1">&#39;s/REPLACE_WITH_CLUSTER_URL/my-cluster-kafka-bootstrap.kafka:9092/&#39;</span> <span class="se">\</span>
  <span class="p">|</span> kubectl delete -f -
 </code></pre></div>
@@ -3479,19 +3487,19 @@ kubectl delete -f https://storage.googleapis.com/knative-nightly/serving/latest/
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Google Cloud Pub/Sub Channel</label><div class="tabbed-content">
 <p>Uninstall the Google Cloud Pub/Sub Channel by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/google-nightly/knative-gcp/latest/cloud-run-events.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/google/knative-gcp/releases/download/0.23/cloud-run-events.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">In-Memory (standalone)</label><div class="tabbed-content">
 <p>Uninstall the in-memory channel implementation by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/eventing/latest/in-memory-channel.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/eventing/releases/download/0.23/in-memory-channel.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><label for="__tabbed_5_4">NATS Channel</label><div class="tabbed-content">
 <ol>
 <li>
 <p>Uninstall the NATS Streaming channel by running:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-natss/latest/300-natss-channel.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative-sandbox/eventing-natss/releases/download/0.23/300-natss-channel.yaml
 </code></pre></div>
 </li>
 <li>
@@ -3529,7 +3537,7 @@ Even if the Knative Serving and Knative Eventing CRs are successfully removed, a
 Knative are still kept in the cluster. All your resources relying on Knative CRDs can still work.</p>
 <h3 id="removing-the-knative-operator">Removing the Knative Operator:<a class="headerlink" href="#removing-the-knative-operator" title="Permanent link">&para;</a></h3>
 <p>If you have installed Knative using the Release page, remove the operator using the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/operator/latest/operator.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://github.com/knative/operator/releases/download/0.23/operator.yaml
 </code></pre></div>
 <p>If you have installed Knative from source, uninstall it using the following command while in the root
 directory for the source:</p>

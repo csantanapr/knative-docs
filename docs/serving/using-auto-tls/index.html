@@ -72,6 +72,14 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+
+
+          </div>
+        </aside>
+      
     </div>
     
       <header class="md-header" data-md-component="header">
@@ -3553,7 +3561,7 @@ providers, are provided in
 </li>
 <li>
 <p>If <code>networking-certmanager</code> is not found, run the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/net-certmanager/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://github.com/knative/net-certmanager/releases/download/0.23/release.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -3570,7 +3578,7 @@ running the following command:</p>
 </li>
 <li>
 <p>If <code>networking-ns-cert</code> deployment is not found, run the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/serving/latest/serving-nscert.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://github.com/knative/serving/releases/download/0.23/serving-nscert.yaml
 </code></pre></div>
 </li>
 </ol>

@@ -72,6 +72,14 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+
+
+          </div>
+        </aside>
+      
     </div>
     
       <header class="md-header" data-md-component="header">
@@ -3280,7 +3288,7 @@ and <a href="../install-eventing-with-yaml/">Installing Eventing using YAML file
 <p>Knative also supports the use of the Kubernetes Horizontal Pod Autoscaler (HPA)
 for driving autoscaling decisions. The following command will install the
 components needed to support HPA-class autoscaling:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-hpa.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/serving/releases/download/0.23/serving-hpa.yaml
 </code></pre></div>
 <!-- TODO(https://github.com/knative/docs/issues/2152): Link to a more in-depth guide on HPA-class autoscaling -->
 </div>
@@ -3296,7 +3304,7 @@ via cert-manager.</p>
 </li>
 <li>
 <p>Next, install the component that integrates Knative with cert-manager:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-certmanager/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/net-certmanager/releases/download/0.23/release.yaml
 </code></pre></div>
 </li>
 <li>
@@ -3312,7 +3320,7 @@ support that.</p>
 <ol>
 <li>
 <p>First, install the <code>net-http01</code> controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-http01/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/net-http01/releases/download/0.23/release.yaml
 </code></pre></div>
 </li>
 <li>
@@ -3339,7 +3347,7 @@ wildcard certificates (e.g. cert-manager with a DNS01 issuer), then the most
 efficient way to provision certificates is with the namespace wildcard
 certificate controller. The following command will install the components needed
 to provision wildcard certificates in each namespace:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-nscert.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/serving/releases/download/0.23/serving-nscert.yaml
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -3350,8 +3358,8 @@ options.</p>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">DomainMapping CRD</label><div class="tabbed-content">
 <p>The <code>DomainMapping</code> CRD allows a user to map a Domain Name that they own to a
 specific Knative Service.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping-crds.yaml
-kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/serving/releases/download/0.23/serving-domainmapping-crds.yaml
+kubectl apply -f https://github.com/knative/serving/releases/download/0.23/serving-domainmapping.yaml
 </code></pre></div>
 </div>
 </div>
@@ -3363,12 +3371,12 @@ kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/s
 <ol>
 <li>
 <p>Install the Kafka controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-controller.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Kafka Sink data plane:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-sink.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-kafka-broker/releases/download/0.23/eventing-kafka-sink.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -3377,7 +3385,7 @@ kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/s
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Sugar Controller</label><div class="tabbed-content">
 <!-- Unclear when this feature came in -->
 <p>The following command installs the Eventing Sugar Controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-sugar-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative/eventing/releases/download/0.23/eventing-sugar-controller.yaml
 </code></pre></div>
 <p>The Knative Eventing Sugar Controller will react to special labels and
 annotations and produce Eventing resources. For example:</p>
@@ -3395,11 +3403,11 @@ annotations and produce Eventing resources. For example:</p>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Github Source</label><div class="tabbed-content">
 <p>The following command installs the single-tenant Github source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/github.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-github/releases/download/0.23/github.yaml
 </code></pre></div>
 <p>The single-tenant GitHub source creates one Knative service per GitHub source.</p>
 <p>The following command installs the multi-tenant GitHub source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/mt-github.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-github/releases/download/0.23/mt-github.yaml
 </code></pre></div>
 <p>The multi-tenant GitHub source creates only one Knative service handling all
 GitHub sources in the cluster. This source does not support logging or tracing
@@ -3409,14 +3417,14 @@ configuration yet.</p>
 </div>
 <input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Apache Camel-K Source</label><div class="tabbed-content">
 <p>The following command installs the Apache Camel-K Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-camel/latest/camel.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-camel/releases/download/0.23/camel.yaml
 </code></pre></div>
 <p>To learn more about the Apache Camel-K source, try
 <a href="../eventing/samples/apache-camel-source/README.md">our sample</a></p>
 </div>
 <input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">Apache Kafka Source</label><div class="tabbed-content">
 <p>The following command installs the Apache Kafka Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka/latest/source.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-kafka/releases/download/0.23/source.yaml
 </code></pre></div>
 <p>To learn more about the Apache Kafka source, try
 <a href="../eventing/samples/kafka/source/README.md">our sample</a></p>
@@ -3424,7 +3432,7 @@ configuration yet.</p>
 <input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">GCP Sources</label><div class="tabbed-content">
 <p>The following command installs the GCP Sources:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># This installs both the Sources and the Channel.</span>
-kubectl apply -f https://storage.googleapis.com/google-nightly/knative-gcp/latest/cloud-run-events.yaml
+kubectl apply -f https://github.com/google/knative-gcp/releases/download/0.23/cloud-run-events.yaml
 </code></pre></div>
 <p>To learn more about the Cloud Pub/Sub source, try
 <a href="../eventing/samples/cloud-pubsub-source/README.md">our sample</a>.</p>
@@ -3437,13 +3445,13 @@ kubectl apply -f https://storage.googleapis.com/google-nightly/knative-gcp/lates
 </div>
 <input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><label for="__tabbed_2_7">Apache CouchDB Source</label><div class="tabbed-content">
 <p>The following command installs the Apache CouchDB Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-couchdb/latest/couchdb.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/knative-sandbox/eventing-couchdb/releases/download/0.23/couchdb.yaml
 </code></pre></div>
 <p>To learn more about the Apache CouchDB source, read the <a href="https://github.com/knative-sandbox/eventing-couchdb/blob/main/source/README.md">documentation</a>.</p>
 </div>
 <input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><label for="__tabbed_2_8">VMware Sources and Bindings</label><div class="tabbed-content">
 <p>The following command installs the VMware Sources and Bindings:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/vmware-tanzu-nightly/sources-for-knative/latest/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://github.com/vmware-tanzu/sources-for-knative/releases/download/0.23/release.yaml
 </code></pre></div>
 <p>To learn more about the VMware sources and bindings, try
 <a href="https://github.com/vmware-tanzu/sources-for-knative/tree/master/samples/README.md">our samples</a>.</p>

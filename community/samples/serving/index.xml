@@ -28,7 +28,7 @@ specified, it will use &amp;ldquo;World&amp;rdquo; as the TARGET.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed and DNS configured. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to create
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to create
 one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -178,7 +178,7 @@ that you can use for testing. It reads in the env variable &lt;code&gt;TARGET&lt
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed and DNS configured. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to create
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to create
 one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -325,7 +325,7 @@ following commands:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to
 create one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -454,7 +454,7 @@ deploying your app to your Knative cluster.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A version of the Knative Serving component installed and running on your
 Kubernetes cluster. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;Knative installation instructions&lt;/a&gt; if you need to
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;Knative installation instructions&lt;/a&gt; if you need to
 create a Knative cluster.&lt;/li&gt;
 &lt;li&gt;The following software downloaded and install on your loacal machine:
 &lt;ul&gt;
@@ -961,7 +961,7 @@ specified, it will use &amp;ldquo;World&amp;rdquo; as the TARGET.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed and DNS configured. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to create
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to create
 one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -1139,7 +1139,7 @@ deploying your app to your Knative cluster.&lt;/p&gt;
 &lt;p&gt;You must meet the following requirements to complete this sample:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A version of the Knative Serving component installed and DNS configured. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;Knative installation instructions&lt;/a&gt; if you need
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;Knative installation instructions&lt;/a&gt; if you need
 to create a Knative cluster.&lt;/li&gt;
 &lt;li&gt;The following software downloaded and install on your loacal machine:
 &lt;ul&gt;
@@ -1648,7 +1648,7 @@ deploy the image to Knative.&lt;/p&gt;
 &lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to
 create one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured. Docker Hub will be used for a container registry).&lt;/li&gt;
@@ -1884,7 +1884,7 @@ following commands:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to
 create one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -2060,7 +2060,7 @@ following commands:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to
 create one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -2199,7 +2199,7 @@ env variable &lt;code&gt;TARGET&lt;/code&gt; and prints &amp;ldquo;Hello ${TARGE
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Kubernetes cluster with Knative installed and DNS configured. Follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt; if you need to create
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt; if you need to create
 one.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your local machine,
 and a Docker Hub account configured (we&amp;rsquo;ll use it for a container registry).&lt;/li&gt;
@@ -2375,7 +2375,7 @@ specified, the app uses &amp;ldquo;World&amp;rdquo; as the TARGET.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You must have a Kubernetes cluster with Knative installed and DNS configured.
 If you need to create a cluster, follow the
-&lt;a href=&#34;../../../../docs/install/README.md&#34;&gt;installation instructions&lt;/a&gt;.&lt;/li&gt;
+&lt;a href=&#34;../../../../docs/install/index.html&#34;&gt;installation instructions&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;You must have &lt;a href=&#34;https://www.docker.com&#34;&gt;Docker&lt;/a&gt; installed and running on your
 local machine, and a Docker Hub account configured (used for container
 registry).&lt;/li&gt;
