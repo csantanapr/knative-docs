@@ -81,7 +81,7 @@ See [the Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl
     curl -sL install.konk.dev | bash
     ```
 
-OMG KONK ROCKS !
+OMG KONK !
 
 ??? question "What does the KonK script actually do?"
     Knative on Kind (KonK) is a shell script which:
