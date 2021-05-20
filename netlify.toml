@@ -13,3 +13,9 @@
 # inherit these settings.
 [context.deploy-preview]
   publish = "site"
+
+# Redirect to point to mkdocs dev for now
+[[redirects]]
+  from = "/v0.22-docs/*"
+  to = "https://knative.dev/v0.22-docs/"
+  status = 301
