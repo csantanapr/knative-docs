@@ -53,10 +53,11 @@ else
   for i in "${!previous[@]}"; do
     version=${previous[$i]}
     versionjson+="{\"version\": \"v$version-docs\", \"title\": \"v$version\", \"aliases\": [\"\"]},"
-    git clone --depth 1 -b ${BRANCHES[$i+1]} https://github.com/${REPOS[i+1]}/docs "temp/docs-$version"
-    pushd "temp/docs-$version"
-    KNATIVE_VERSION=$version VERSION_WARNING=true mkdocs build -d "../../site/v$version-docs"
-    popd
+    # make redirects work on netlify
+    #git clone --depth 1 -b ${BRANCHES[$i+1]} https://github.com/${REPOS[i+1]}/docs "temp/docs-$version"
+    #pushd "temp/docs-$version"
+    #KNATIVE_VERSION=$version VERSION_WARNING=true mkdocs build -d "../../site/v$version-docs"
+    #popd
   done
 
   # Set up the version file to point to the built docs.
