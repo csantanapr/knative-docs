@@ -18,3 +18,8 @@
 [[redirects]]
   from = "/v0.22-docs/"
   to = "https://knative.dev/v0.22-docs/"
+
+# Redirect to point to mkdocs dev for now
+[[redirects]]
+  from = "/foo/*"
+  to = "/bar"
