@@ -124,7 +124,7 @@ pip freeze
     mv temp/website/public/$d site/
   done
 fi
-cat site/index.html | grep blog
+cat site/development/index.html | grep blog
 
 # Home page is served from docs, so add a redirect.
 # TODO(jz) in production this should be done with a netlify 301 (or maybe just copy docs/index up with a base set).
