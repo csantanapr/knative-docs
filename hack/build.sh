@@ -114,8 +114,6 @@ if [ -z "$SKIP_BLOG" ]; then
       -exec sed -i '/](/ { /http/ !{s#\.md##g} }' {} +
 
   # Run the hugo build as normal!
-  # DEBUG: Useful when debugging builds
-pip freeze
   hugo
   popd
 
