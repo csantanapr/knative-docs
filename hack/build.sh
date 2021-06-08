@@ -31,6 +31,11 @@ community_repo=${COMMUNITY_REPO:-knative}
 latest=${VERSIONS[0]}
 previous=("${VERSIONS[@]:1}")
 
+# DEBUG: Useful when debugging builds
+pip freeze
+mkdocs --version
+hugo version
+
 rm -rf temp
 mkdir temp
 rm -rf site/
@@ -109,6 +114,8 @@ if [ -z "$SKIP_BLOG" ]; then
       -exec sed -i '/](/ { /http/ !{s#\.md##g} }' {} +
 
   # Run the hugo build as normal!
+  # DEBUG: Useful when debugging builds
+pip freeze
   hugo
   popd
 
@@ -117,7 +124,7 @@ if [ -z "$SKIP_BLOG" ]; then
     mv temp/website/public/$d site/
   done
 fi
-cat site/blog/index.html | grep blog
+cat site/index.html | grep blog
 
 # Home page is served from docs, so add a redirect.
 # TODO(jz) in production this should be done with a netlify 301 (or maybe just copy docs/index up with a base set).
