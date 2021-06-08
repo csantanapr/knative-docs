@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knative – Join the Knative community</title>
+    <title>Knative – Communities</title>
     <link>https://knative.dev/community/</link>
-    <description>Recent content in Join the Knative community on Knative</description>
+    <description>Recent content in Communities on Knative</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://knative.dev/community/index.xml" rel="self" type="application/rss+xml" />
@@ -849,6 +849,111 @@ Knative usage&lt;/li&gt;
     
     <item>
       <title>Community: </title>
+      <link>https://knative.dev/community/contributing/working-groups/security/disclosure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://knative.dev/community/contributing/working-groups/security/disclosure/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;early-disclosure-of-security-vulnerabilities&#34;&gt;Early Disclosure of Security Vulnerabilities&lt;/h1&gt;
+&lt;p&gt;(This policy is based on the &lt;a href=&#34;https://github.com/istio/community/blob/1911286/EARLY-DISCLOSURE.md&#34;&gt;Istio Early Disclosure Policy&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Knative follows the process described in &lt;a href=&#34;../responding&#34;&gt;responding&lt;/a&gt; when security vulnerabilities are reported.&lt;/p&gt;
+&lt;p&gt;The Knative project maintains a mailing list for private early disclosure of
+security vulnerabilities.
+The list is used to provide actionable information to close Knative partners.
+The list is &lt;em&gt;NOT&lt;/em&gt; intended for individuals to find out about
+security issues.&lt;/p&gt;
+&lt;p&gt;Knative has upstream dependencies of its own. In certain situations, we may need to make emergency
+Knative releases to address vulnerabilities in these upstream dependencies. Due to embargo policies of
+these dependencies, we may not be allowed to share any details about the vulnerabilities. In that
+case, Knative&amp;rsquo;s early disclosure will be strictly focused on the mechanics of an upcoming patch
+release, rather than on the details of the discovered vulnerabilities.&lt;/p&gt;
+&lt;h2 id=&#34;embargo-policy&#34;&gt;Embargo policy&lt;/h2&gt;
+&lt;p&gt;The information members receive from the mailing list must not be
+made public, shared, nor even hinted at anywhere beyond the need-to-know within
+your specific team except with the list&amp;rsquo;s explicit approval. This holds
+true until the public disclosure date/time that was agreed upon by the list.
+Members of the list and others may not use the information for anything other
+than getting the issue fixed for your respective distribution&amp;rsquo;s users.&lt;/p&gt;
+&lt;p&gt;Before any information from the list is shared with respective members of your
+team required to fix said issue, they must agree to the same terms and only
+find out information on a need-to-know basis.&lt;/p&gt;
+&lt;p&gt;In the unfortunate event you share the information beyond what is allowed by
+this policy, you &lt;em&gt;must&lt;/em&gt; urgently inform the mailing list by replying to the
+initial disclosure email. The email should specify exactly what information
+leaked and to whom. A retrospective will take place after the leak so
+we can assess how to not make the same mistake in the future.&lt;/p&gt;
+&lt;p&gt;If you continue to leak information and break the policy outlined here, you
+will be removed from the early disclosure list.&lt;/p&gt;
+&lt;h2 id=&#34;membership&#34;&gt;Membership&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Email&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Organization&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;membership-criteria&#34;&gt;Membership criteria&lt;/h3&gt;
+&lt;p&gt;To be eligible for the early disclosure mailing list, your
+organization must:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Have an actively monitored security email alias for our project. This cannot be a personal
+email address, it must be a corporate address owned by the organization.&lt;/li&gt;
+&lt;li&gt;Be involved in redistributing Knative or have a product with close coupling to Knative.&lt;/li&gt;
+&lt;li&gt;Have a user base not limited to your own organization.&lt;/li&gt;
+&lt;li&gt;Be a participant and active contributor in the Knative community.&lt;/li&gt;
+&lt;li&gt;Accept the &lt;a href=&#34;#embargo-policy&#34;&gt;Embargo Policy&lt;/a&gt; that is outlined above.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Removal&lt;/strong&gt;: If your organization stops meeting one or more of these criteria
+after joining the list then you will be unsubscribed.&lt;/p&gt;
+&lt;h3 id=&#34;request-to-join&#34;&gt;Request to join&lt;/h3&gt;
+&lt;p&gt;New membership requests should be emailed to &lt;a href=&#34;mailto:security@knative.team&#34;&gt;security@knative.team&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the body of your email please specify how you qualify and fulfill each
+criterion listed in &lt;a href=&#34;#membership-criteria&#34;&gt;Membership criteria&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;To: security@knative.team
+Subject: Seven-Corp Membership to Early Disclosure Mailing List
+
+Below are each criterion and why I think we, Seven-Corp, qualify.
+
+&amp;gt; 1. Have an actively monitored security alias email for our project.
+
+Yes, please subscribe knative-security-team@example.com to the early disclosure
+list.
+
+&amp;gt; 2. Be involved in redistributing Knative or have a product with close coupling to Knative.
+
+We distribute the &amp;quot;Seven&amp;quot; distribution of knative [link]. We have been doing
+this since 2017.
+
+&amp;gt; 3. Have a user base not limited to your own organization.
+
+Our user base spans of the extensive &amp;quot;Seven&amp;quot; community. We have a slack and
+GitHub repos and mailing lists where the community hangs out. [links]
+
+&amp;gt; 4. Be a participant and active contributor in the Knative community.
+
+Our members, Acidburn, Cereal, and ZeroCool are outstanding members and are well
+known throughout the Knative community. Especially for their contributions
+in hacking the Gibson.
+
+&amp;gt; 5. Accept the Embargo Policy that is outlined above.
+
+We accept.
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Community: </title>
       <link>https://knative.dev/community/contributing/working-groups/security/responding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -871,8 +976,8 @@ disclosures of vulnerabilities (while being large enough to spread the work of
 responding to vulnerabilities) and should be composed of those who will
 actively work on the fix and disclosure process.&lt;/p&gt;
 &lt;p&gt;Anyone who is an Approver, Lead or TOC Member in a Knative Project, or who is
-an employee of a member of the Embargo list working in a security role may
-apply to be a member of this group.
+an employee of a member of the Embargo list working in a security-focused or
+knative-focused role may apply to be a member of this group.
 The application is approved or rejected by the TOC.&lt;/p&gt;
 &lt;h2 id=&#34;identifying-a-fix-lead&#34;&gt;Identifying a Fix Lead&lt;/h2&gt;
 &lt;p&gt;The PST Fix Lead Role is responsible for initially responding to
@@ -987,6 +1092,95 @@ get good at this as a community.&lt;/li&gt;
 &lt;p&gt;This document borrows heavily and gratefully from the &lt;a href=&#34;https://github.com/envoyproxy/envoy/blob/main/SECURITY.md&#34;&gt;Envoy Vulnerability
 Response Process&lt;/a&gt;
 and the &lt;a href=&#34;https://github.com/google/oss-vulnerability-guide/blob/main/guide.md&#34;&gt;Google OSS Vulnerability Guide&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Community: </title>
+      <link>https://knative.dev/community/contributing/working-groups/security/threat-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://knative.dev/community/contributing/working-groups/security/threat-model/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;knative-threat-model&#34;&gt;Knative Threat Model&lt;/h1&gt;
+&lt;p&gt;This document describes the Knative threat model. When vulnerabilities are
+reported to the project, we consult this document to determine whether the
+report describes a potential exploit, and if so to determine the severity of
+the exploit. As we develop new features, we consult this document to consider
+their impact on the threat model.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Status:&lt;/em&gt; Work in Progress. This document does not yet represent the full
+threat model envisioned by the knative community, but we have to start
+somewhere.&lt;/p&gt;
+&lt;h2 id=&#34;tenancy-model&#34;&gt;Tenancy Model&lt;/h2&gt;
+&lt;p&gt;There are three common tenancy models currently in use in the Kubernetes
+Ecosystem (See &lt;a href=&#34;https://kubernetes.io/blog/2021/04/15/three-tenancy-models-for-kubernetes/&#34;&gt;Three Tenancy Models for Kubernetes&lt;/a&gt;).
+Summarising here, in the first, a cluster is fully owned by a single tenant
+(Cluster-as-a-service).
+In the second, a cluster is partitioned between multiple tenants with the
+Namespace forming a security boundary between tenants of the cluster
+(Namspace-as-a-service).
+In the third, resources such as nodes and schedulers are shared, but the
+tenants, are presented with a logical cluster and can perform global operations
+such as installing CRDs and managing namespaces (Control-plane-as-a-service).&lt;/p&gt;
+&lt;p&gt;Currently, Knative assumes a single tenant per cluster (Cluster-as-a-service)
+as its security model.&lt;/p&gt;
+&lt;p&gt;While it is possible to secure Knative for use in non-single-tenant
+environments, for example by setting up appropriate NetworkPolicy, using
+appropriate container isolation techniques, and filtering requests to shared
+components such as the activator, the project does not currently consider
+itself to be secure for this use case. We would like eventually to support
+secure use in Namespace-as-a-service and Control-plane-as-a-service
+environments out of the box, and are very receptive to contributions that
+improve support for Namespace-as-a-service clusters, but we do not currently
+view exploits in these situations as vulnerabilities for the purpose of our
+disclosure policy.&lt;/p&gt;
+&lt;h2 id=&#34;trusted-and-untrusted-workloads&#34;&gt;Trusted and untrusted workloads&lt;/h2&gt;
+&lt;p&gt;Knative is often used to implement platforms which permit developers to submit
+code or containers, which the platform runs. In some cases only trusted
+developers can submit code (for example in a private cluster), whereas in
+others the code may be entirely untrusted (for example when knative is used to
+implement a multi-tenant FaaS-style system). In either case the resulting
+applications might be available only to trusted users (again for example in a
+private cluster), or to untrusted users (a single-tenant cluster providing
+internet-accessible applications).&lt;/p&gt;
+&lt;p&gt;We differentiate between attacks on the system that require permission to
+create a Knative Service or Revision, and attacks that can be performed against
+knative clusters or workloads even without permissions to directly deploy a
+workload. In a multi-tenant environment it is possible that all users who can
+access the environment will also have permission to deploy workloads.&lt;/p&gt;
+&lt;p&gt;The most significant exploits are those that affect a cluster even without the
+ability to submit workloads. Another class of attack would involve an
+administrator with access to Knative being to perform actions that exceed their
+cluster roles; for now, since we primarily consider single-tenant clusters,
+while we are keen to fix any bugs in this area, we do not consider cases such
+as this as an exploit.&lt;/p&gt;
+&lt;h2 id=&#34;availability-confidentiality-and-integrity&#34;&gt;Availability, confidentiality, and integrity&lt;/h2&gt;
+&lt;p&gt;We consider the confidentiality of user data and integrity of user workloads
+the most significant concern. We are also concerned about Denial of Service and
+Availability attacks (particularly where exploitable without the ability to
+submit workloads), but are aware that these currently exist both within Knative
+and the underlying Kubernetes platform. For this reason availability attacks
+are currently treated as relatively lower priority.&lt;/p&gt;
+&lt;p&gt;In general, since many availability risks are inherited from the underlying
+platform, we only - in Knative - consider issues which are significantly higher
+than the same situation in Kubernetes itself.&lt;/p&gt;
+&lt;h2 id=&#34;security-of-the-underlying-cluster&#34;&gt;Security of the underlying Cluster&lt;/h2&gt;
+&lt;p&gt;Knative relies on the security of the underlying cluster to maintain its
+security posture. This requires manual work that is the responsibility of
+upstream SIGs to document.
+The project cannot be secure if the underlying platform is not secured.&lt;/p&gt;
+&lt;h2 id=&#34;security-of-container-and-network-technologies&#34;&gt;Security of container and network technologies&lt;/h2&gt;
+&lt;p&gt;Similarly to the above paragraph, Knative relies on the security of underlying
+container and networking technologies for its security. This includes proper
+configuration of these technologies. For example, it is not secure to run
+mutually untrusted workloads in a cluster without properly configuring
+isolation technologies (for example a VM-based container engine such as gVisor
+or firecracker, or enabling - at least - user namespaces and seccomp if using
+containerD or crio), and network technologies. The project does not currently
+provide guidance on this, although we would like to in future.&lt;/p&gt;
 
       </description>
     </item>

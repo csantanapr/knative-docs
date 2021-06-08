@@ -4,7 +4,7 @@
     <link>https://knative.dev/blog/</link>
     <description>Recent content in Knative blog on Knative</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 May 2021 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="https://knative.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,188 @@
     
     
     <item>
-      <title>Blog: Version 0.22 release</title>
-      <link>https://knative.dev/blog/2021/04/06/version-0.22-release/</link>
+      <title>Blog: v0.23 release</title>
+      <link>https://knative.dev/blog/2021/05/18/v0.23-release/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://knative.dev/blog/2021/05/18/v0.23-release/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;announcing-knative-v023-release&#34;&gt;Announcing Knative v0.23 Release&lt;/h3&gt;
+&lt;p&gt;A new version of Knative is now available across multiple components.
+Follow the instructions in the documentation &lt;a href=&#34;https://knative.dev/docs/install/&#34;&gt;Installing Knative&lt;/a&gt; for the respective component.&lt;/p&gt;
+&lt;h4 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#serving-v023&#34;&gt;Serving v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#eventing-v023&#34;&gt;Eventing v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eventing Extensions
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#apache-kafka-broker-v023&#34;&gt;Apache Kafka Broker v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rabbitmq-eventing-v023&#34;&gt;RabbitMQ Eventing v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kn&lt;/code&gt; &lt;a href=&#34;#client-v023&#34;&gt;CLI v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operator-v023&#34;&gt;Operator v0.23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thank-you-contributors&#34;&gt;Thank you contributors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;highlights&#34;&gt;Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Serving improves support for Istio when using Mesh to access the user container directly&lt;/li&gt;
+&lt;li&gt;Eventing removes old API version only leaving &lt;code&gt;v1&lt;/code&gt; as the one available&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;kn&lt;/code&gt; CLI and Operator keeps crushing bugs in this release.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;serving-v023&#34;&gt;Serving v0.23&lt;/h3&gt;
+&lt;!-- Original notes are here: https://github.com/knative/serving/releases/tag/v0.23.0 --&gt;
+&lt;h4 id=&#34;-breaking-or-notable-changes&#34;&gt;🚨 Breaking or Notable Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Change the default post-install job to use sslip.io rather than xip.io. &lt;a href=&#34;https://github.com/knative/serving/pull/11298&#34;&gt;#11298&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-new-features--changes&#34;&gt;💫 New Features &amp;amp; Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The stats scraping in the autoscaler is now sensitive to the &lt;code&gt;EnableMeshPodAddressability&lt;/code&gt; setting. A restart of the autoscaler is required for the setting to take effect if changed. &lt;a href=&#34;https://github.com/knative/serving/pull/11161&#34;&gt;#11161&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The state keeping in the activator is now sensitive to the &lt;code&gt;EnableMeshPodAddressability&lt;/code&gt; setting. A restart of the activator is required for the setting to take effect if changed. &lt;a href=&#34;https://github.com/knative/serving/pull/11172&#34;&gt;#11172&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tightens the heuristic for mesh being enabled in the service scraper. We now expect all errors to be related to mesh (i.e. 503 status code). This prevents accidentally falling in to service scrape mode when errors are encountered for other reasons. &lt;a href=&#34;https://github.com/knative/serving/pull/11174&#34;&gt;#11174&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-bug-fixes&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Added schemas to all CRDs. &lt;a href=&#34;https://github.com/knative/serving/pull/11244&#34;&gt;#11244&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Changed the rollout behavior of application deployment changes (due to Knative upgrade for example) to never have less ready posd than required. &lt;a href=&#34;https://github.com/knative/serving/pull/11140&#34;&gt;#11140&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rate limits digest resolution (10 QPS, retry back-off 1s to 1000s) to prevent exceeding quota at remote registries &lt;a href=&#34;https://github.com/knative/serving/pull/11279&#34;&gt;#11279&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Revision replicas now shut down 15 seconds faster. &lt;a href=&#34;https://github.com/knative/serving/pull/11249&#34;&gt;#11249&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The activator proxy now recognizes the &lt;code&gt;EnableMeshPodAddressability&lt;/code&gt; setting. &lt;a href=&#34;https://github.com/knative/serving/pull/11162&#34;&gt;#11162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update the User-Agent used during tag resolution &lt;a href=&#34;https://github.com/knative/serving/pull/10590&#34;&gt;#10590&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eventing-v023&#34;&gt;Eventing v0.23&lt;/h3&gt;
+&lt;!-- Original notes are here: https://github.com/knative/eventing/releases/tag/v0.23.1 --&gt;
+&lt;h4 id=&#34;-breaking-or-notable-changes-1&#34;&gt;🚨 Breaking or Notable Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove {&lt;code&gt;eventing&lt;/code&gt;,&lt;code&gt;flows&lt;/code&gt;,&lt;code&gt;messaging&lt;/code&gt;} &lt;code&gt;v1beta1&lt;/code&gt; APIs &lt;a href=&#34;https://github.com/knative/eventing/pull/5201&#34;&gt;#5201&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Promote PingSource to v1 &lt;a href=&#34;https://github.com/knative/eventing/pull/5324&#34;&gt;#5324&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;APIServerSource&lt;/code&gt;, &lt;code&gt;ContainerSource&lt;/code&gt;, &lt;code&gt;PingSource&lt;/code&gt; and &lt;code&gt;SinkBinding&lt;/code&gt; v1alpha2 APIs &lt;a href=&#34;https://github.com/knative/eventing/pull/5318&#34;&gt;#5318&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;APIServerSource&lt;/code&gt;, &lt;code&gt;ContainerSource&lt;/code&gt;, &lt;code&gt;PingSource&lt;/code&gt; and &lt;code&gt;SinkBinding&lt;/code&gt; v1beta1 APIs &lt;a href=&#34;https://github.com/knative/eventing/pull/5319&#34;&gt;#5319&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;APIServerSource&lt;/code&gt; and &lt;code&gt;SinkBinding&lt;/code&gt; v1alpha1 APIs &lt;a href=&#34;https://github.com/knative/eventing/pull/5317&#34;&gt;#5317&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-new-features--changes-1&#34;&gt;💫 New Features &amp;amp; Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;InMemoryChannel can now be used independently of Knative Eventing, and can be installed by applying the &lt;code&gt;in-memory-channel.yaml&lt;/code&gt;. &lt;a href=&#34;https://github.com/knative/eventing/pull/5355&#34;&gt;#5355&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Multi-tenant, channel-based brokers now have improved filter performance for Triggers with few or no filters. &lt;a href=&#34;https://github.com/knative/eventing/pull/5355&#34;&gt;#5288&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-bug-fixes-1&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;duckv1.SourceSpec&lt;/code&gt;, &lt;code&gt;TimeZone&lt;/code&gt;, &lt;code&gt;Schedule&lt;/code&gt; will be populated when called by &lt;code&gt;v1beta1/v1alpha2&lt;/code&gt; clients &lt;a href=&#34;https://github.com/knative/eventing/pull/5153&#34;&gt;#5153&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Trigger &lt;code&gt;delivery&lt;/code&gt; spec is now automatically propagated to Subscriptions that are connected to multi-tenant, channel-based Brokers. &lt;a href=&#34;https://github.com/knative/eventing/pull/5267&#34;&gt;#5267&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-clean-up&#34;&gt;🧹 Clean up&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Tools from the &lt;a href=&#34;https://github.com/knative/eventing-contrib/tree/main/cmd&#34;&gt;&lt;code&gt;eventing-contrib&lt;/code&gt; repository&lt;/a&gt; have now been moved to the &lt;code&gt;eventing&lt;/code&gt; repository. &lt;a href=&#34;https://github.com/knative/eventing/pull/5295&#34;&gt;#5295&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sequence now displays conditions as &lt;code&gt;Unknown&lt;/code&gt; rather than &lt;code&gt;False&lt;/code&gt; for non-terminal condition states. &lt;a href=&#34;https://github.com/knative/eventing/pull/5369&#34;&gt;#5369&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Running validation for event ingress on multi-tenant broker &lt;a href=&#34;https://github.com/knative/eventing/pull/5275&#34;&gt;#5275&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eventing-extensions&#34;&gt;Eventing Extensions&lt;/h3&gt;
+&lt;h4 id=&#34;apache-kafka-broker-v023&#34;&gt;Apache Kafka Broker v0.23&lt;/h4&gt;
+&lt;!-- Original notes are here: https://github.com/knative-sandbox/eventing-kafka-broker/releases/tag/v0.23.0 --&gt;
+&lt;h4 id=&#34;-new-features--changes-2&#34;&gt;💫 New Features &amp;amp; Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;In Kafka Broker, now the Kafka producer will wait for all ISR replicas ack. &lt;a href=&#34;https://github.com/knative-sandbox/eventing-kafka-broker/pull/824&#34;&gt;#824&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In Kafka Sink, now the Kafka producer will wait for all ISR replicas ack. &lt;a href=&#34;https://github.com/knative-sandbox/eventing-kafka-broker/pull/827&#34;&gt;#827&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-bug-fixes-2&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix out of bounds in unordered offset manager. &lt;a href=&#34;https://github.com/knative-sandbox/eventing-kafka-broker/pull/814&#34;&gt;#814&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Accept &amp;ldquo;PLAIN&amp;rdquo; as a valid sasl.mechanism secret value. &lt;a href=&#34;https://github.com/knative-sandbox/eventing-kafka-broker/pull/855&#34;&gt;#855&lt;/a&gt;,&lt;a href=&#34;https://github.com/knative-sandbox/eventing-kafka-broker/pull/840&#34;&gt;#840&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;rabbitmq-eventing-v023&#34;&gt;RabbitMQ Eventing v0.23&lt;/h4&gt;
+&lt;!-- Original notes are here: https://github.com/knative-sandbox/eventing-rabbitmq/releases/tag/v0.23.0 --&gt;
+&lt;h4 id=&#34;-breaking-or-notable-changes-2&#34;&gt;🚨 Breaking or Notable Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;requires &lt;a href=&#34;https://github.com/rabbitmq/messaging-topology-operator&#34;&gt;messaging-topology-operator&lt;/a&gt; version &lt;code&gt;v0.8.0&lt;/code&gt; to be installed as well as &lt;a href=&#34;https://github.com/rabbitmq/cluster-operator&#34;&gt;cluster-operator&lt;/a&gt; version &lt;code&gt;v1.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-bug-fixes-3&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conformance tests for Broker now work&lt;/li&gt;
+&lt;li&gt;If a Broker / Trigger is deleted but there&amp;rsquo;s no secret to talk to the rabbit cluster, we now remove the resources and log that rabbitmq resources might have been leaked. This happens only when not using the Rabbit Cluster Operator. This left undeletable resources, so this change seems more user friendly. &lt;a href=&#34;https://github.com/knative-sandbox/eventing-rabbitmq/pull/271&#34;&gt;#271&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;client-v023&#34;&gt;Client v0.23&lt;/h3&gt;
+&lt;!-- Original notes are here: https://github.com/knative/client/blob/main/CHANGELOG.adoc#v0230-2021-05-18 --&gt;
+&lt;h4 id=&#34;-new-features--changes-3&#34;&gt;💫 New Features &amp;amp; Changes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update Eventing Sources APIServerSource, ContainerSource, SinkBinding API to v1. &lt;a href=&#34;https://github.com/knative/client/pull/1299&#34;&gt;#1299&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update Eventing Source PingSource API to v1beta2. &lt;a href=&#34;https://github.com/knative/client/pull/1299&#34;&gt;#1299&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add number of instances to describe command. &lt;a href=&#34;https://github.com/knative/client/pull/1289&#34;&gt;#1289&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-bug-fixes-4&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix for serviceaccounts &amp;ldquo;default&amp;rdquo; not found flaky issue. &lt;a href=&#34;https://github.com/knative/client/pull/1312&#34;&gt;#1312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix number of instances *int32 type in describe commands. &lt;a href=&#34;https://github.com/knative/client/pull/1312&#34;&gt;#1312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use fully qualified test images. &lt;a href=&#34;https://github.com/knative/client/pull/1307&#34;&gt;#1307&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix documentation of the configuration options. &lt;a href=&#34;https://github.com/knative/client/pull/1297&#34;&gt;#1297&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Respect -o in list commands in case if no data present. &lt;a href=&#34;https://github.com/knative/client/pull/1276&#34;&gt;#1276&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;operator-v023&#34;&gt;Operator v0.23&lt;/h3&gt;
+&lt;!-- Original notes are here: https://github.com/knative/operator/releases/tag/v0.23.0 --&gt;
+&lt;h4 id=&#34;-bug-fixes-5&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Apply high availability settings to kourier as well. &lt;a href=&#34;https://github.com/knative/operator/pull/579&#34;&gt;#579&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clear OwnerReferences on knative-local-gateway Service. &lt;a href=&#34;https://github.com/knative/operator/pull/567&#34;&gt;#567&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set the namespace of the service knative-local-gateway to the istio namespace. &lt;a href=&#34;https://github.com/knative/operator/pull/590&#34;&gt;#590&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add pingsource-mt-adapter into HA list. &lt;a href=&#34;https://github.com/knative/operator/pull/591&#34;&gt;#591&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Return an actual newest version of the directory latest is not available. &lt;a href=&#34;https://github.com/knative/operator/pull/576&#34;&gt;#576&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow for all Ingresses to be disabled. &lt;a href=&#34;https://github.com/knative/operator/pull/571&#34;&gt;#571&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;-clean-up-1&#34;&gt;🧹 Clean up&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Simplify Istio installation for end-to-end test. &lt;a href=&#34;https://github.com/knative/operator/pull/564&#34;&gt;#564&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use he Kourier deployment namespace to determine Kourier&amp;rsquo;s gateway namespace. &lt;a href=&#34;https://github.com/knative/operator/pull/577&#34;&gt;#577&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated the Knative Serving upgrade tests script. &lt;a href=&#34;https://github.com/knative/operator/pull/574&#34;&gt;#574&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;thank-you-contributors&#34;&gt;Thank you contributors&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/matzew&#34;&gt;@@matzew&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/benmoss&#34;&gt;@benmoss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dsimansk&#34;&gt;@dsimansk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/eclipselu&#34;&gt;@eclipselu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/evidolob&#34;&gt;@evidolob&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/houshengbo&#34;&gt;@houshengbo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jonjohnsonjr&#34;&gt;@jonjohnsonjr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/julz&#34;&gt;@julz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lionelvillard&#34;&gt;@lionelvillard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/markusthoemmes&#34;&gt;@markusthoemmes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mgencur&#34;&gt;@mgencur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/n3wscott&#34;&gt;@n3wscott&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nak3&#34;&gt;@nak3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pierDipi&#34;&gt;@pierDipi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/polivbr&#34;&gt;@polivbr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pratham-m&#34;&gt;@pratham-m&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rhuss&#34;&gt;@rhuss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/slinkydeveloper&#34;&gt;@slinkydeveloper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vaikas&#34;&gt;@vaikas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;learn-more&#34;&gt;Learn more&lt;/h3&gt;
+&lt;p&gt;Knative is an open source project that anyone in the &lt;a href=&#34;https://knative.dev/community/&#34;&gt;community&lt;/a&gt; can use, improve, and enjoy. We&amp;rsquo;d love you to join us!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://knative.dev/docs#welcome-to-knative&#34;&gt;Welcome to Knative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://knative.dev/docs/#getting-started&#34;&gt;Getting started documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://knative.dev/docs#samples-and-demos&#34;&gt;Samples and demos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://knative.dev/contributing/#working-group&#34;&gt;Knative meetings and work groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://knative.dev/contributing/#questions-and-issues&#34;&gt;Questions and issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/knative-users&#34;&gt;Knative User Mailing List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/knative-dev&#34;&gt;Knative Development Mailing List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Knative on Twitter &lt;a href=&#34;https://twitter.com/KnativeProject&#34;&gt;@KnativeProject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Knative on &lt;a href=&#34;https://stackoverflow.com/questions/tagged/knative&#34;&gt;StackOverflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Knative &lt;a href=&#34;https://slack.knative.dev&#34;&gt;Slack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Knative on &lt;a href=&#34;https://www.youtube.com/channel/UCq7cipu-A1UHOkZ9fls1N8A&#34;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: v0.22 release</title>
+      <link>https://knative.dev/blog/2021/04/06/v0.22-release/</link>
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2021/04/06/version-0.22-release/</guid>
+      <guid>https://knative.dev/blog/2021/04/06/v0.22-release/</guid>
       <description>
         
         
@@ -74,7 +251,7 @@ Follow the instructions in the documentation &lt;a href=&#34;https://knative.dev
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;v1alpha1&lt;/code&gt; channel duck types are no longer supported. &lt;a href=&#34;https://github.com/knative/eventing/pull/5005&#34;&gt;#5005&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- We don&#39;t know what this means in the release notes. Leaving here commented out to hide it. 
+&lt;!-- We don&#39;t know what this means in the release notes. Leaving here commented out to hide it.
 - Allow Trigger users to set another namespace&#39;s Subscriber, And when Subscriber&#39;s namespace not been set, it will be set to Trigger&#39;s namespace [#4995](https://github.com/knative/eventing/pull/4995)
 --&gt;
 &lt;h4 id=&#34;-bug-fixes-1&#34;&gt;🐞 Bug Fixes&lt;/h4&gt;
@@ -190,11 +367,11 @@ To migrate to the updated API signature, you can pass an already existing contex
     </item>
     
     <item>
-      <title>Blog: Version v0.21 release</title>
-      <link>https://knative.dev/blog/2021/02/26/version-v0.21-release/</link>
+      <title>Blog: v0.21 release</title>
+      <link>https://knative.dev/blog/2021/02/26/v0.21-release/</link>
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2021/02/26/version-v0.21-release/</guid>
+      <guid>https://knative.dev/blog/2021/02/26/v0.21-release/</guid>
       <description>
         
         
@@ -480,11 +657,11 @@ Follow the instructions in the documentation &lt;a href=&#34;https://knative.dev
     </item>
     
     <item>
-      <title>Blog: Version v0.20 release</title>
-      <link>https://knative.dev/blog/2021/01/15/version-v0.20-release/</link>
+      <title>Blog: v0.20 release</title>
+      <link>https://knative.dev/blog/2021/01/15/v0.20-release/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2021/01/15/version-v0.20-release/</guid>
+      <guid>https://knative.dev/blog/2021/01/15/v0.20-release/</guid>
       <description>
         
         
@@ -695,7 +872,7 @@ the following platforms: &lt;code&gt;darwin/amd64&lt;/code&gt;, &lt;code&gt;linu
 &lt;p&gt;As part of the Serverless Workflow implementation, Kogito offers a Kubernetes Operator to deploy these workflows with Knative. The goal is to make it as simple as possible to deploy and manage user-defined workflows in  cloud environments. Knative Eventing plays a very important role in this scenario by providing the underlying infrastructure for event-driven architectures.&lt;/p&gt;
 &lt;h3 id=&#34;kogito-serverless-workflow&#34;&gt;Kogito Serverless Workflow&lt;/h3&gt;
 &lt;p&gt;To demonstrate how the Kogito workflow implementation works on Knative&amp;rsquo;s event-driven architecture, we will use the &lt;a href=&#34;https://github.com/kiegroup/kogito-examples/tree/master/serverless-workflow-functions-events-quarkus&#34;&gt;patient onboarding example&lt;/a&gt;. In this example, we simulate a workflow used in hospitals to onboard new patients and assign them to the correct doctor.&lt;/p&gt;
-&lt;p&gt;The following image taken from the &lt;a href=&#34;https://github.com/serverlessworkflow/specification/blob/master/examples/examples.md#New-Patient-Onboarding&#34;&gt;specification examples page&lt;/a&gt; illustrates this workflow:&lt;/p&gt;
+&lt;p&gt;The following image taken from the &lt;a href=&#34;https://github.com/serverlessworkflow/specification/tree/main/examples#New-Patient-Onboarding&#34;&gt;specification examples page&lt;/a&gt; illustrates this workflow:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../blog/articles/images/kogito-example-patientonboarding.png&#34; alt=&#34;Patient onboarding workflow representation&#34;&gt;
 &lt;em&gt;Patient Onboarding workflow representation&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The workflow starts after receiving a &lt;a href=&#34;https://github.com/cloudevents/spec&#34;&gt;CloudEvent&lt;/a&gt; object that contains patient information. Three functions are then called by the spec in a sequence which: (1) stores the patient information, (2) assigns the patient to a doctor based on their symptoms, and (3) schedules an appointment with the assigned doctor for that patient.&lt;/p&gt;
@@ -775,11 +952,11 @@ the following platforms: &lt;code&gt;darwin/amd64&lt;/code&gt;, &lt;code&gt;linu
     </item>
     
     <item>
-      <title>Blog: Version v0.19 release</title>
-      <link>https://knative.dev/blog/2020/11/13/version-v0.19-release/</link>
+      <title>Blog: v0.19 release</title>
+      <link>https://knative.dev/blog/2020/11/13/v0.19-release/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2020/11/13/version-v0.19-release/</guid>
+      <guid>https://knative.dev/blog/2020/11/13/v0.19-release/</guid>
       <description>
         
         
@@ -1379,11 +1556,11 @@ keep evolving as our technology grows.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Blog: Version v0.18 release</title>
-      <link>https://knative.dev/blog/2020/09/30/version-v0.18-release/</link>
+      <title>Blog: v0.18 release</title>
+      <link>https://knative.dev/blog/2020/09/30/v0.18-release/</link>
       <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2020/09/30/version-v0.18-release/</guid>
+      <guid>https://knative.dev/blog/2020/09/30/v0.18-release/</guid>
       <description>
         
         
@@ -1660,11 +1837,11 @@ This information can be used to select the type when creating a channel with &lt
     </item>
     
     <item>
-      <title>Blog: Version v0.17 release</title>
-      <link>https://knative.dev/blog/2020/08/24/version-v0.17-release/</link>
+      <title>Blog: v0.17 release</title>
+      <link>https://knative.dev/blog/2020/08/24/v0.17-release/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2020/08/24/version-v0.17-release/</guid>
+      <guid>https://knative.dev/blog/2020/08/24/v0.17-release/</guid>
       <description>
         
         
@@ -3660,18 +3837,18 @@ ingress.class:
 kourier.ingress.networking.knative.dev
 ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To get the same experience that you would when using a cluster that has DNS names set up, you can add a “magic” DNS provider.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;nip.io&lt;/em&gt; provides a wildcard DNS setup that will automatically resolve to the IP address you put in front of nip.io.&lt;/p&gt;
-&lt;p&gt;To patch the domain configuration for Knative Serving using nip.io, enter the command:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sslip.io&lt;/em&gt; provides a wildcard DNS setup that will automatically resolve to the IP address you put in front of sslip.io.&lt;/p&gt;
+&lt;p&gt;To patch the domain configuration for Knative Serving using sslip.io, enter the command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl patch configmap/config-domain &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --namespace knative-serving &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --type merge &lt;span style=&#34;color:#4e9a06&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --patch &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{&amp;#34;data&amp;#34;:{&amp;#34;127.0.0.1.nip.io&amp;#34;:&amp;#34;&amp;#34;}}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --patch &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{&amp;#34;data&amp;#34;:{&amp;#34;127.0.0.1.sslip.io&amp;#34;:&amp;#34;&amp;#34;}}&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to validate that the patch command was successful, run the command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl describe configmap/config-domain --namespace knative-serving
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;... &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;abbreviated &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; readability&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#000&#34;&gt;Data&lt;/span&gt;
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;====&lt;/span&gt;
-127.0.0.1.nip.io:
+127.0.0.1.sslip.io:
 ----
 ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By now, all pods in the knative-serving and kourier-system namespaces should be running.
@@ -3719,12 +3896,12 @@ The first step is to create a yaml file with the hello world service definition:
 &lt;strong&gt;NOTE:&lt;/strong&gt; While your cluster is configuring the components that make up the service, the output of the &lt;code&gt;kubectl get ksvc&lt;/code&gt; command will show that the revision is missing. The status &lt;strong&gt;ready&lt;/strong&gt; eventually changes to &lt;strong&gt;true&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get ksvc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;NAME            URL                                             LATESTCREATED         LATESTREADY   READY     REASON
-helloworld-go   http://helloworld-go.default.127.0.0.1.nip.io   helloworld-go-fqqs6                 Unknown   RevisionMissing
+helloworld-go   http://helloworld-go.default.127.0.0.1.sslip.io   helloworld-go-fqqs6                 Unknown   RevisionMissing
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;NAME            URL                                             LATESTCREATED         LATESTREADY           READY   REASON
-helloworld-go   http://helloworld-go.default.127.0.0.1.nip.io   helloworld-go-fqqs6   helloworld-go-fqqs6   True
+helloworld-go   http://helloworld-go.default.127.0.0.1.sslip.io   helloworld-go-fqqs6   helloworld-go-fqqs6   True
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The final step is to test your application, by checking that the code returns what you expect. You can do this by sending a cURL request to the URL listed above.&lt;/p&gt;
 &lt;p&gt;Because this example mapped port 80 of the host to be forwarded to the cluster and set the DNS, you can use the exact URL.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -v http://helloworld-go.default.127.0.0.1.nip.io
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -v http://helloworld-go.default.127.0.0.1.sslip.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Hello Knative Serving is up and running with Kourier!!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-5-cleaning-up&#34;&gt;Step 5: Cleaning up&lt;/h2&gt;
 &lt;p&gt;You can stop your cluster and remove all the resources you’ve created by entering the command:&lt;/p&gt;

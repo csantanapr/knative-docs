@@ -260,8 +260,7 @@ demonstrated our community values&lt;/li&gt;
 vendors so that we have a diverse group of thought and input&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;composition&#34;&gt;Composition&lt;/h1&gt;
-&lt;p&gt;The TOC will have five seats with a 2 year term, with a maximum of 2 seats being
-held by employees from the same organization (or conglomerate, in the case of companies owning each other).&lt;/p&gt;
+&lt;p&gt;The TOC will have five seats with a 2 year term.&lt;/p&gt;
 &lt;p&gt;There will be an annual election to determine the composition of the TOC for the
 following year. Three seats will be up for election in one year and two will be
 up for election the following year.&lt;/p&gt;
@@ -271,9 +270,6 @@ up for election the following year.&lt;/p&gt;
 with at least 3 months tenure are eligible to stand for election. Candidates may
 self-nominate or be nominated by another eligible member. The approximate time
 commitment of a TOC member is around 8 hours per week.&lt;/p&gt;
-&lt;p&gt;Please note that vendor or organization limits do not restrict candidate eligibility.
-We encourage all interested candidates in running as there may be occurrences where a TOC member
-steps down and is back-filled by the candidate with the next most votes from the previous election.&lt;/p&gt;
 &lt;h1 id=&#34;voter-eligibility&#34;&gt;Voter Eligibility&lt;/h1&gt;
 &lt;p&gt;Anyone who has at least 50 contributions in the last 12 months is eligible to
 vote in the TOC election. Contributions are defined as opening PRs, reviewing
@@ -302,15 +298,21 @@ the open seats.&lt;/p&gt;
 &lt;p&gt;The steering committee will be the election officers for the technical oversight
 committee elections.&lt;/p&gt;
 &lt;h2 id=&#34;vacancies&#34;&gt;Vacancies&lt;/h2&gt;
-&lt;p&gt;In the event of a resignation or other loss of an elected TOC member, the
-candidate with the next most votes from the previous election will be offered
-the seat. This process will continue until the seat is filled.&lt;/p&gt;
+&lt;p&gt;In the event of a resignation or other loss of an elected TOC member with less
+than three months left until the next regular annual election, the Steering
+Committee shall appoint a qualified contributor to fill that TOC seat until
+that election.&lt;/p&gt;
+&lt;p&gt;Otherwise the candidate with the next most votes from the previous annual
+election will be offered the seat. If the seat cannot be filled from the
+previous annual election, the candidate with the next most votes from the most
+recent special election will be offered the seat. This process will continue
+until the seat is filled.&lt;/p&gt;
 &lt;p&gt;In case this fails to fill the seat, a special election for that position will
 be held as soon as possible. Eligible voters from the most recent election will
 vote in the special election (ie: eligibility will not be redetermined at the
-time of the special election). Any replacement TOC member will serve out the
-remainder of the term for the person they are replacing, regardless of the
-length of that remainder.&lt;/p&gt;
+time of the special election). Any elected replacement TOC member will serve
+out the remainder of the term for the person they are replacing, regardless of
+the length of that remainder.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Except as otherwise noted, the content of this page is licensed under the
 &lt;a href=&#34;https://creativecommons.org/licenses/by/4.0/&#34;&gt;Creative Commons Attribution 4.0 License&lt;/a&gt;,

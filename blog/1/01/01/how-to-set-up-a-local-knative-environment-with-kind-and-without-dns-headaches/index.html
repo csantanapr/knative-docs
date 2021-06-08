@@ -30,8 +30,8 @@
 
 
 
-<link rel="preload" href="../../../../../scss/main.min.446b5cf2b5e985fc003296634574cafc3b6565246dcbf3df101bd6f1c186791a.css" as="style">
-<link href="../../../../../scss/main.min.446b5cf2b5e985fc003296634574cafc3b6565246dcbf3df101bd6f1c186791a.css" rel="stylesheet" integrity="">
+<link rel="preload" href="../../../../../scss/main.min.9887a3b2a22622afca0371ebf4a96a4618a9f90adbc2bfcad861fbac4cb94aa2.css" as="style">
+<link href="../../../../../scss/main.min.9887a3b2a22622afca0371ebf4a96a4618a9f90adbc2bfcad861fbac4cb94aa2.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -201,61 +201,67 @@ if (!doNotTrack) {
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210406version-022-release" href="../../../../../blog/2021/04/06/version-0.22-release/">Version 0.22 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210518v023-release" href="../../../../../blog/2021/05/18/v0.23-release/">v0.23 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210226version-v021-release" href="../../../../../blog/2021/02/26/version-v0.21-release/">Version v0.21 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210406v022-release" href="../../../../../blog/2021/04/06/v0.22-release/">v0.22 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210115version-v020-release" href="../../../../../blog/2021/01/15/version-v0.20-release/">Version v0.20 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210226v021-release" href="../../../../../blog/2021/02/26/v0.21-release/">v0.21 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20201113version-v019-release" href="../../../../../blog/2020/11/13/version-v0.19-release/">Version v0.19 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20210115v020-release" href="../../../../../blog/2021/01/15/v0.20-release/">v0.20 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20200930version-v018-release" href="../../../../../blog/2020/09/30/version-v0.18-release/">Version 0.18 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20201113v019-release" href="../../../../../blog/2020/11/13/v0.19-release/">v0.19 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20200824version-v017-release" href="../../../../../blog/2020/08/24/version-v0.17-release/">Version 0.17 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20200930v018-release" href="../../../../../blog/2020/09/30/v0.18-release/">v0.18 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190411announcing-the-knative-v05-release" href="../../../../../blog/2019/04/11/announcing-the-knative-v0.5-release/">Version 0.5 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20200824v017-release" href="../../../../../blog/2020/08/24/v0.17-release/">v0.17 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190220announcing-the-knative-v04-release" href="../../../../../blog/2019/02/20/announcing-the-knative-v0.4-release/">Version 0.4 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190411announcing-the-knative-v05-release" href="../../../../../blog/2019/04/11/announcing-the-knative-v0.5-release/">v0.5 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190115announcing-the-knative-v03-release" href="../../../../../blog/2019/01/15/announcing-the-knative-v0.3-release/">Version 0.3 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190220announcing-the-knative-v04-release" href="../../../../../blog/2019/02/20/announcing-the-knative-v0.4-release/">v0.4 release</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20181114announcing-the-knative-v02-release" href="../../../../../blog/2018/11/14/announcing-the-knative-v0.2-release/">Version 0.2 release</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20190115announcing-the-knative-v03-release" href="../../../../../blog/2019/01/15/announcing-the-knative-v0.3-release/">v0.3 release</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blog20181114announcing-the-knative-v02-release" href="../../../../../blog/2018/11/14/announcing-the-knative-v0.2-release/">v0.2 release</a>
       
       
     </li>
@@ -684,18 +690,18 @@ ingress.class:
 kourier.ingress.networking.knative.dev
 ...
 </code></pre></div><p>To get the same experience that you would when using a cluster that has DNS names set up, you can add a “magic” DNS provider.</p>
-<p><em>nip.io</em> provides a wildcard DNS setup that will automatically resolve to the IP address you put in front of nip.io.</p>
-<p>To patch the domain configuration for Knative Serving using nip.io, enter the command:</p>
+<p><em>sslip.io</em> provides a wildcard DNS setup that will automatically resolve to the IP address you put in front of sslip.io.</p>
+<p>To patch the domain configuration for Knative Serving using sslip.io, enter the command:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl patch configmap/config-domain <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace knative-serving <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --type merge <span style="color:#4e9a06">\
-</span><span style="color:#4e9a06"></span>  --patch <span style="color:#4e9a06">&#39;{&#34;data&#34;:{&#34;127.0.0.1.nip.io&#34;:&#34;&#34;}}&#39;</span>
+</span><span style="color:#4e9a06"></span>  --patch <span style="color:#4e9a06">&#39;{&#34;data&#34;:{&#34;127.0.0.1.sslip.io&#34;:&#34;&#34;}}&#39;</span>
 </code></pre></div><p>If you want to validate that the patch command was successful, run the command:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl describe configmap/config-domain --namespace knative-serving
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">... <span style="color:#ce5c00;font-weight:bold">(</span>abbreviated <span style="color:#204a87;font-weight:bold">for</span> readability<span style="color:#ce5c00;font-weight:bold">)</span>
 <span style="color:#000">Data</span>
 <span style="color:#ce5c00;font-weight:bold">====</span>
-127.0.0.1.nip.io:
+127.0.0.1.sslip.io:
 ----
 ...
 </code></pre></div><p>By now, all pods in the knative-serving and kourier-system namespaces should be running.
@@ -743,12 +749,12 @@ The first step is to create a yaml file with the hello world service definition:
 <strong>NOTE:</strong> While your cluster is configuring the components that make up the service, the output of the <code>kubectl get ksvc</code> command will show that the revision is missing. The status <strong>ready</strong> eventually changes to <strong>true</strong>.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl get ksvc
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">NAME            URL                                             LATESTCREATED         LATESTREADY   READY     REASON
-helloworld-go   http://helloworld-go.default.127.0.0.1.nip.io   helloworld-go-fqqs6                 Unknown   RevisionMissing
+helloworld-go   http://helloworld-go.default.127.0.0.1.sslip.io   helloworld-go-fqqs6                 Unknown   RevisionMissing
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">NAME            URL                                             LATESTCREATED         LATESTREADY           READY   REASON
-helloworld-go   http://helloworld-go.default.127.0.0.1.nip.io   helloworld-go-fqqs6   helloworld-go-fqqs6   True
+helloworld-go   http://helloworld-go.default.127.0.0.1.sslip.io   helloworld-go-fqqs6   helloworld-go-fqqs6   True
 </code></pre></div><p>The final step is to test your application, by checking that the code returns what you expect. You can do this by sending a cURL request to the URL listed above.</p>
 <p>Because this example mapped port 80 of the host to be forwarded to the cluster and set the DNS, you can use the exact URL.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -v http://helloworld-go.default.127.0.0.1.nip.io
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -v http://helloworld-go.default.127.0.0.1.sslip.io
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello Knative Serving is up and running with Kourier!!
 </code></pre></div><h2 id="step-5-cleaning-up">Step 5: Cleaning up</h2>
 <p>You can stop your cluster and remove all the resources you’ve created by entering the command:</p>
